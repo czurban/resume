@@ -1,4 +1,34 @@
 .mainDiv {
-  width: 1600px;
+  max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.img {
+  border-radius: 20px;
+}
+
+.list {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  gap: 20px !important;
+  width: 100% !important;
+}
+
+.card-item {
+  flex: 0 1 auto !important; /* Не дает карточке растягиваться на всю ширину */
+  border: 1px solid white;
+  padding: 15px;
+}
+
+li {
+  list-style: none !important;
+}
+
+.top {
 }
