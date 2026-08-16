@@ -1,21 +1,22 @@
-import { useState } from "react";
 import { NavLink, Route, Routes } from "react-router-dom";
 import { Contacts } from "./pages/Contacts";
 import { Home } from "./pages/Home";
 import { Projects } from "./pages/Projects";
 
-import "./App.css";
+import "./index.css";
 
 function App() {
-  const [lang, setLang] = useState("en");
-
   return (
-    <div>
-      <div className="flex">
-        <h1>Oleksii Khudolei</h1>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/projects">Projects</NavLink>
-        <NavLink to="/contacts">Contacts</NavLink>
+    <div className="flex flex-col">
+      <div className="flex flex-row items-center justify-between h-12 px-4 border-b border-t-0 border-l-0 border-r-0 border-[#232328]">
+        <h1 className="text-xl tracking-widest font-medium">
+          Oleksii Khudolei
+        </h1>
+        <div className="flex tracking-wide flex-row gap-8 pr-4 text-md">
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/projects">Projects</NavLink>
+          <NavLink to="/contacts">Contacts</NavLink>
+        </div>
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
