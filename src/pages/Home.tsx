@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { Footer } from "../components/Footer";
 import { Sections } from "../components/Sections";
@@ -6,15 +7,20 @@ export const Home = () => {
   return (
     <>
       <div>
-        <div className="flex flex-col justify-center items-center mt-5 max-w-4xl mx-auto px-6">
-          <h2 className="font-bold text-3xl">Hi, i am Oleksii</h2>
-          <p className="text-md text-zinc-400">Fullstack-developer</p>
+        <motion.div
+          initial={{ opacity: 0, y: 0 }}
+          animate={{ opacity: 1, y: -80 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="flex flex-col w-full h-[90vh] justify-center items-center animate-slide-up mt-5 mx-auto px-6"
+        >
+          <h2 className="font-bold text-4xl">Hi, i am Oleksii</h2>
+          <p className="text-lg text-zinc-400">Fullstack-developer</p>
           <NavLink to="/contacts">
-            <button className="border border-[#F8F9FA] px-6 py-3 rounded-3xl mt-3 cursor-pointer transition-colors hover:bg-white hover:text-black">
+            <button className="border border-[#F8F9FA] px-6 py-3 rounded-3xl mt-3 cursor-pointer text-lg transition-colors hover:bg-white hover:text-black">
               Message me
             </button>
           </NavLink>
-        </div>
+        </motion.div>
         <div className="max-w-4xl mx-auto px-6 pt-16 pb-24">
           <Sections number="01" title="Summary">
             <p className="text-zinc-300 leading-relaxed max-w-2xl">
