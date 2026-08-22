@@ -19,7 +19,7 @@ function App() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <h1 className="text-xl tracking-widest font-medium">
+          <h1 className="text-base tracking-widest font-medium md:text-xl">
             Oleksii Khudolei
           </h1>
         </motion.div>
@@ -28,14 +28,14 @@ function App() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="flex tracking-wide flex-row items-center gap-6 pr-4 text-md"
+          className="flex tracking-wide flex-row items-center gap-3 md:gap-6 pr-2 md:pr-4"
         >
           <LangSwitcher />
 
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `${linkBase} ${isActive ? "text-gray-400" : "text-[#f8f9fa] hover:text-gray-300"}`
+              `${linkBase} text-sm md:text-lg ${isActive ? "text-gray-400" : "text-[#f8f9fa] hover:text-gray-300"}`
             }
           >
             {t("nav.home")}
@@ -44,7 +44,7 @@ function App() {
           <NavLink
             to="/projects"
             className={({ isActive }) =>
-              `${linkBase} ${isActive ? "text-gray-400" : "text-[#f8f9fa] hover:text-gray-300"}`
+              `${linkBase} text-sm md:text-lg ${isActive ? "text-gray-400" : "text-[#f8f9fa] hover:text-gray-300"}`
             }
           >
             {t("nav.projects")}
@@ -53,7 +53,7 @@ function App() {
           <NavLink
             to="/contacts"
             className={({ isActive }) =>
-              `${linkBase} ${isActive ? "text-gray-400" : "text-[#f8f9fa] hover:text-gray-300"}`
+              `${linkBase} text-sm md:text-lg ${isActive ? "text-gray-400" : "text-[#f8f9fa] hover:text-gray-300"}`
             }
           >
             {t("nav.contacts")}
