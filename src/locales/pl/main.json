@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "projects": "Projekty",
+    "contacts": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Cześć, jestem Oleksii",
+    "role": "Fullstack developer",
+    "cta": "Napisz do mnie"
+  },
+  "sections": {
+    "summary": "Podsumowanie",
+    "experience": "Doświadczenie",
+    "education": "Edukacja",
+    "skills": "Umiejętności"
+  },
+  "summary": {
+    "highlight": "Junior Full-Stack Developer",
+    "text": "z praktycznym doświadczeniem w nowoczesnym ekosystemie React/TypeScript, Node.js i Express. Zdobyłem doświadczenie komercyjne podczas stażu w DataArt, pracując w środowisku Agile. Skupiam się na pisaniu czystego, skalowalnego kodu, responsywnych interfejsów z Tailwind CSS oraz projektowaniu i wdrażaniu aplikacji backendowych z wykorzystaniem stosu MERN i Dockera."
+  },
+  "experience": {
+    "role": "DataArt — Trainee Frontend Developer",
+    "dates": "06/2025 – 08/2025",
+    "location": "Lublin, Polska",
+    "bullets": [
+      "Praca z systemami kontroli wersji (Git) i dokumentacją techniczną",
+      "Implementacja komponentów UI w oparciu o React i JavaScript",
+      "Współpraca z zespołem IT z wykorzystaniem metodyki Agile"
+    ]
+  },
+  "education": {
+    "school": "Akademia WSEI — Inżynier",
+    "location": "Lublin, Polska · 10/2024 – obecnie"
+  },
+  "skills": {
+    "frontend_label": "Frontend",
+    "backend_label": "Backend",
+    "tools_label": "Narzędzia i ekosystem",
+    "frontend": [
+      "HTML5",
+      "CSS3",
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "React",
+      "React Router",
+      "Axios",
+      "Tailwind CSS"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "MongoDB (Atlas)",
+      "REST API",
+      "Vercel Serverless"
+    ],
+    "tools": ["Git", "GitHub", "Webpack/Vite", "Linux", "Docker", "Postman"]
+  },
+  "footer": {
+    "builtWith": "Zbudowano z Typescript i Tailwind"
+  }
+}

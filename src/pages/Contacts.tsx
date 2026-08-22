@@ -2,10 +2,13 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { Mail, Send } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { Footer } from "../components/Footer";
 
 export const Contacts = () => {
+  const { t } = useTranslation("contacts");
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -19,11 +22,7 @@ export const Contacts = () => {
     setIsSending(true);
     setStatus("idle");
 
-    const templateParams = {
-      name: name,
-      email: email,
-      message: message,
-    };
+    const templateParams = { name, email, message };
 
     try {
       await emailjs.send(
@@ -32,7 +31,6 @@ export const Contacts = () => {
         templateParams,
         "22chEVx-_ZIUcbmfv",
       );
-
       setStatus("success");
       setName("");
       setEmail("");
@@ -59,15 +57,14 @@ export const Contacts = () => {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
             <span className="text-xs text-zinc-500 font-mono uppercase tracking-widest">
-              Available for work
+              {t("badge")}
             </span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Let's build something
+            {t("title")}
           </h1>
           <p className="text-zinc-400 max-w-md leading-relaxed">
-            Open to full-time roles, contract work, and technical
-            collaborations. Drop a line below.
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -84,13 +81,16 @@ export const Contacts = () => {
             >
               <Mail className="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors" />
               <div>
-                <p className="text-sm text-white font-medium">Email</p>
+                <p className="text-sm text-white font-medium">
+                  {t("cards.email.label")}
+                </p>
                 <p className="text-xs text-zinc-500 group-hover:text-zinc-300 transition-colors">
-                  Direct line
+                  {t("cards.email.subtitle")}
                 </p>
               </div>
             </a>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -105,13 +105,16 @@ export const Contacts = () => {
             >
               <Send className="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors" />
               <div>
-                <p className="text-sm text-white font-medium">Telegram</p>
+                <p className="text-sm text-white font-medium">
+                  {t("cards.telegram.label")}
+                </p>
                 <p className="text-xs text-zinc-500 group-hover:text-zinc-300 transition-colors">
-                  Fastest reply
+                  {t("cards.telegram.subtitle")}
                 </p>
               </div>
             </a>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -126,13 +129,16 @@ export const Contacts = () => {
             >
               <FaLinkedinIn className="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors" />
               <div>
-                <p className="text-sm text-white font-medium">LinkedIn</p>
+                <p className="text-sm text-white font-medium">
+                  {t("cards.linkedin.label")}
+                </p>
                 <p className="text-xs text-zinc-500 group-hover:text-zinc-300 transition-colors">
-                  Professional
+                  {t("cards.linkedin.subtitle")}
                 </p>
               </div>
             </a>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -147,9 +153,11 @@ export const Contacts = () => {
             >
               <FaGithub className="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors" />
               <div>
-                <p className="text-sm text-white font-medium">GitHub</p>
+                <p className="text-sm text-white font-medium">
+                  {t("cards.github.label")}
+                </p>
                 <p className="text-xs text-zinc-500 group-hover:text-zinc-300 transition-colors">
-                  See the code
+                  {t("cards.github.subtitle")}
                 </p>
               </div>
             </a>
@@ -168,14 +176,14 @@ export const Contacts = () => {
             <span className="w-2.5 h-2.5 rounded-full bg-zinc-700"></span>
             <span className="w-2.5 h-2.5 rounded-full bg-zinc-700"></span>
             <span className="text-xs text-zinc-600 font-mono ml-2">
-              new_message.txt
+              {t("form.filename")}
             </span>
           </div>
 
           <form onSubmit={handleSubmit} className="p-6 flex flex-col gap-5">
             <div>
               <label className="text-xs text-zinc-500 font-mono block mb-2">
-                {"> your_name"}
+                {`> ${t("form.name")}`}
               </label>
               <input
                 required
@@ -189,7 +197,7 @@ export const Contacts = () => {
 
             <div>
               <label className="text-xs text-zinc-500 font-mono block mb-2">
-                {"> your_email"}
+                {`> ${t("form.email")}`}
               </label>
               <input
                 required
@@ -203,13 +211,13 @@ export const Contacts = () => {
 
             <div>
               <label className="text-xs text-zinc-500 font-mono block mb-2">
-                {"> message"}
+                {`> ${t("form.message")}`}
               </label>
               <textarea
                 required
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Let's talk about..."
+                placeholder={t("form.messagePlaceholder")}
                 rows={4}
                 className="w-full bg-transparent border-b border-[#232328] pb-2 text-white placeholder-zinc-700 focus:outline-none focus:border-zinc-500 transition-colors resize-none"
               />
@@ -221,17 +229,17 @@ export const Contacts = () => {
                 type="submit"
                 className="border border-[#F8F9FA] px-6 py-3 rounded-3xl cursor-pointer transition-colors hover:bg-white hover:text-black disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSending ? "Sending..." : "Send →"}
+                {isSending ? t("form.sending") : t("form.send")}
               </button>
 
               {status === "success" && (
                 <span className="text-xs font-mono text-green-400">
-                  ✓ Message sent
+                  ✓ {t("form.success")}
                 </span>
               )}
               {status === "error" && (
                 <span className="text-xs font-mono text-red-400">
-                  ✗ Failed to send
+                  ✗ {t("form.error")}
                 </span>
               )}
             </div>

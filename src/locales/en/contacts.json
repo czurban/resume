@@ -1,0 +1,22 @@
+{
+  "badge": "Available for work",
+  "title": "Let's build something",
+  "subtitle": "Open to full-time roles, contract work, and technical collaborations. Drop a line below.",
+  "cards": {
+    "email": { "label": "Email", "subtitle": "Direct line" },
+    "telegram": { "label": "Telegram", "subtitle": "Fastest reply" },
+    "linkedin": { "label": "LinkedIn", "subtitle": "Professional" },
+    "github": { "label": "GitHub", "subtitle": "See the code" }
+  },
+  "form": {
+    "filename": "new_message.txt",
+    "name": "your_name",
+    "email": "your_email",
+    "message": "message",
+    "messagePlaceholder": "Let's talk about...",
+    "send": "Send →",
+    "sending": "Sending...",
+    "success": "Message sent",
+    "error": "Failed to send"
+  }
+}

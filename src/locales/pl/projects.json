@@ -1,0 +1,42 @@
+{
+  "title": "Projekty",
+  "subtitle": "Kilka rzeczy, które stworzyłem",
+  "scrollDown": "Przewiń w dół",
+  "github": "GitHub",
+  "ecommerce": {
+    "title": "Sklep internetowy",
+    "description": "W pełni funkcjonalny sklep online z katalogiem produktów, kategoriami, wyszukiwarką, koszykiem i uwierzytelnianiem użytkowników.",
+    "bullets": [
+      "Dynamiczny routing według kategorii i produktu, z trwałym koszykiem i kontami przechowywanymi w localStorage",
+      "Własna karuzela zdjęć i poziomy suwak promocji zbudowane od podstaw",
+      "Dane produktów pobierane z zewnętrznego API ze stanami ładowania i błędów"
+    ]
+  },
+  "hub": {
+    "title": "Productivity Hub",
+    "description": "Aplikacja typu \"wszystko w jednym\" łącząca notatki, system budzików z dźwiękiem i powiadomieniami, tracker zadań oraz czytnik tarota napędzany AI.",
+    "bullets": [
+      "Sprawdzanie budzików w czasie rzeczywistym z odtwarzaniem dźwięku i powiadomieniami przeglądarki",
+      "Integracja z API LLM (OpenRouter) dla mistycznych interpretacji dopasowanych do kontekstu",
+      "Stan zapisywany w localStorage w trzech niezależnych modułach"
+    ]
+  },
+  "thoughts": {
+    "title": "True Thoughts",
+    "description": "Aplikacja full-stack MERN do anonimowego publikowania krótkich myśli, z rozdzielonym frontendem i backendem.",
+    "bullets": [
+      "Zaprojektowane REST API (Node.js/Express) zintegrowane z MongoDB Atlas",
+      "Wdrożone na Vercel z użyciem Serverless Functions",
+      "Widok przechowywania w formie kart z sformatowanymi znacznikami czasu i funkcją usuwania"
+    ]
+  },
+  "vin": {
+    "title": "VIN Decoder",
+    "description": "Narzędzie do dekodowania numerów VIN przy użyciu oficjalnego API NHTSA.",
+    "bullets": [
+      "Walidacja numeru VIN po stronie klienta za pomocą wyrażeń regularnych przed wywołaniem API",
+      "Historia wyszukiwań zapisywana w localStorage z przyciskami szybkiego dostępu",
+      "Osobna strona z listą wszystkich dekodowalnych zmiennych pojazdu"
+    ]
+  }
+}

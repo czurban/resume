@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { NavLink, Route, Routes } from "react-router-dom";
+import { LangSwitcher } from "./components/LangSwitcher";
 import "./index.css";
 import { Contacts } from "./pages/Contacts";
 import { Home } from "./pages/Home";
 import { Projects } from "./pages/Projects";
 
 function App() {
+  const { t } = useTranslation("main");
   const linkBase = "transition-colors duration-200 cursor-pointer";
 
   return (
@@ -25,15 +28,17 @@ function App() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="flex tracking-wide flex-row gap-8 pr-4 text-md"
+          className="flex tracking-wide flex-row items-center gap-6 pr-4 text-md"
         >
+          <LangSwitcher />
+
           <NavLink
             to="/"
             className={({ isActive }) =>
               `${linkBase} ${isActive ? "text-gray-400" : "text-[#f8f9fa] hover:text-gray-300"}`
             }
           >
-            Home
+            {t("nav.home")}
           </NavLink>
 
           <NavLink
@@ -42,7 +47,7 @@ function App() {
               `${linkBase} ${isActive ? "text-gray-400" : "text-[#f8f9fa] hover:text-gray-300"}`
             }
           >
-            Projects
+            {t("nav.projects")}
           </NavLink>
 
           <NavLink
@@ -51,7 +56,7 @@ function App() {
               `${linkBase} ${isActive ? "text-gray-400" : "text-[#f8f9fa] hover:text-gray-300"}`
             }
           >
-            Contacts
+            {t("nav.contacts")}
           </NavLink>
         </motion.nav>
       </header>

@@ -1,0 +1,22 @@
+{
+  "badge": "Dostępny do pracy",
+  "title": "Zbudujmy coś razem",
+  "subtitle": "Otwarty na pracę na pełny etat, projekty kontraktowe i współpracę techniczną. Napisz do mnie poniżej.",
+  "cards": {
+    "email": { "label": "Email", "subtitle": "Bezpośredni kontakt" },
+    "telegram": { "label": "Telegram", "subtitle": "Najszybsza odpowiedź" },
+    "linkedin": { "label": "LinkedIn", "subtitle": "Profil zawodowy" },
+    "github": { "label": "GitHub", "subtitle": "Zobacz kod" }
+  },
+  "form": {
+    "filename": "nowa_wiadomosc.txt",
+    "name": "twoje_imie",
+    "email": "twoj_email",
+    "message": "wiadomosc",
+    "messagePlaceholder": "Porozmawiajmy o...",
+    "send": "Wyślij →",
+    "sending": "Wysyłanie...",
+    "success": "Wiadomość wysłana",
+    "error": "Nie udało się wysłać"
+  }
+}

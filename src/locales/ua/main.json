@@ -1,0 +1,58 @@
+{
+  "nav": { "home": "Головна", "projects": "Проєкти", "contacts": "Контакти" },
+  "hero": {
+    "greeting": "Привіт, я Олексій",
+    "role": "Fullstack-розробник",
+    "cta": "Написати мені"
+  },
+  "sections": {
+    "summary": "Про мене",
+    "experience": "Досвід",
+    "education": "Освіта",
+    "skills": "Навички"
+  },
+  "summary": {
+    "highlight": "Junior Full-Stack Developer",
+    "text": "з практичним досвідом у сучасній екосистемі React/TypeScript, Node.js та Express. Отримав комерційний досвід під час стажування в DataArt, працюючи за методологією Agile. Зосереджуюсь на написанні чистого, масштабованого коду, адаптивних інтерфейсах з Tailwind CSS, а також проєктуванні та розгортанні бекенд-застосунків на базі стеку MERN та Docker."
+  },
+  "experience": {
+    "role": "DataArt — Trainee Frontend Developer",
+    "dates": "06/2025 – 08/2025",
+    "location": "Люблін, Польща",
+    "bullets": [
+      "Робота з системами контролю версій (Git) та технічною документацією",
+      "Реалізація UI-компонентів на основі React та JavaScript",
+      "Співпраця з IT-командою за методологією Agile"
+    ]
+  },
+  "education": {
+    "school": "Akademia WSEI — Інженер",
+    "location": "Люблін, Польща · 10/2024 – дотепер"
+  },
+  "skills": {
+    "frontend_label": "Frontend",
+    "backend_label": "Backend",
+    "tools_label": "Інструменти та екосистема",
+    "frontend": [
+      "HTML5",
+      "CSS3",
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "React",
+      "React Router",
+      "Axios",
+      "Tailwind CSS"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "MongoDB (Atlas)",
+      "REST API",
+      "Vercel Serverless"
+    ],
+    "tools": ["Git", "GitHub", "Webpack/Vite", "Linux", "Docker", "Postman"]
+  },
+  "footer": {
+    "builtWith": "Створено на Typescript та Tailwind"
+  }
+}

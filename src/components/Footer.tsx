@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 export const Footer = () => {
+  const { t } = useTranslation("main");
   const year = new Date().getFullYear();
 
   return (
@@ -32,7 +35,7 @@ export const Footer = () => {
         </div>
 
         <p className="text-xs text-zinc-600 font-mono">
-          Built with Typescript & Tailwind
+          {t("footer.builtWith")}
         </p>
       </div>
     </footer>

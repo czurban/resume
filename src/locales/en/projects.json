@@ -1,0 +1,42 @@
+{
+  "title": "Projects",
+  "subtitle": "A few things I've built",
+  "scrollDown": "Scroll down",
+  "github": "GitHub",
+  "ecommerce": {
+    "title": "E-commerce Store",
+    "description": "Full-featured online shop with product catalog, categories, search, shopping cart, and user authentication.",
+    "bullets": [
+      "Dynamic routing by category and product, with persistent cart and accounts via localStorage",
+      "Custom image carousel and horizontal promotions scroller built from scratch",
+      "Product data fetched from an external API with loading and error states"
+    ]
+  },
+  "hub": {
+    "title": "Productivity Hub",
+    "description": "All-in-one app combining notes, an alarm system with sound and notifications, a task tracker, and an AI-powered tarot reader.",
+    "bullets": [
+      "Real-time alarm checker triggering audio playback and browser Notifications",
+      "Integrated an LLM API (OpenRouter) for mystical, context-aware interpretations",
+      "State persisted to localStorage across three independent feature modules"
+    ]
+  },
+  "thoughts": {
+    "title": "True Thoughts",
+    "description": "Full-stack MERN app for anonymously publishing short thoughts, with a decoupled frontend and backend.",
+    "bullets": [
+      "Designed a REST API (Node.js/Express) integrated with MongoDB Atlas",
+      "Deployed on Vercel using Serverless Functions",
+      "Card-based storage view with formatted timestamps and delete functionality"
+    ]
+  },
+  "vin": {
+    "title": "VIN Decoder",
+    "description": "Utility app for decoding Vehicle Identification Numbers using the official NHTSA API.",
+    "bullets": [
+      "Client-side VIN validation with regex before hitting the API",
+      "Search history saved to localStorage with quick-access buttons",
+      "Separate page listing all decodable vehicle variables"
+    ]
+  }
+}
